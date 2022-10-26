@@ -1,0 +1,486 @@
+CÓDIGO
+using System;
+
+
+namespace Xantolo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, total;
+
+            Console.WriteLine("Ingrese el total de alumnos");
+            n = int.Parse(Console.ReadLine());
+
+            if (n >= 15 && n <= 25)
+            {
+                total = n * 20;
+                Console.WriteLine("El total de cooperacion es: " + total);
+
+
+            }
+            else if (n >= 26 && n <= 32)
+            {
+                total = n * 15;
+                Console.WriteLine("El total de cooperacion es: " + total);
+
+            }
+
+
+
+        }
+
+    }
+}
+CÓDIGO
+using System;
+
+
+namespace Ingreso
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name,namegm;
+            int e;
+            Console.WriteLine("-----BIENVENIDO A OVERWORLD-----");
+            Console.WriteLine("----TORNEO DE VIDEOJUEGOS----");
+            Console.WriteLine("---REGISTRO DE JUGADOR---");
+            Console.WriteLine("ADVERTENCIA:SOLO SE ADMITE A PERSONAS MAYORES DE 18 AÑOS");
+            Console.WriteLine("INGRESE SU NOMBRE");
+            name = Console.ReadLine();
+            Console.WriteLine("INGRESE SU GAMERTAG");
+            namegm = Console.ReadLine();
+            Console.WriteLine("INGRESE SU EDAD");
+            e =int.Parse(Console.ReadLine());
+            Console.WriteLine("ELIGA LA PLATAFORMA EN LA QUE JUEGA: (p) playstation (x) xbox (c) Pc");
+            char t = char.Parse(Console.ReadLine());
+
+            if (e < 18)
+            {
+                Console.WriteLine("Eres menor de edad, no puedes continuar");
+                Console.WriteLine("----GAME OVER----");
+                return;
+            }
+            else if (e >= 18 && t == 'p')
+            {
+                Console.WriteLine("--REGISTRO EXITOSO--");
+                Console.WriteLine("GAMERTAG:  " + namegm);
+                Console.WriteLine("SU PLATAFORMA ES PLAYSTATION");
+                Console.WriteLine("PRECIO DE VACANTE $20");
+            }
+            else if (e >= 18 && t == 'x')
+            {
+                Console.WriteLine("--REGISTRO EXITOSO--");
+                Console.WriteLine("GAMERTAG:  " + namegm);
+                Console.WriteLine("SU PLATAFORMA ES XBOX");
+                Console.WriteLine("PRECIO DE VACANTE $15");
+            }
+            else if (e >= 18 && t == 'c')
+            {
+                Console.WriteLine("--REGISTRO EXITOSO--");
+                Console.WriteLine("GAMERTAG:  " + namegm);
+                Console.WriteLine("SU PLATAFORMA ES PC");
+                Console.WriteLine("PRECIO DE VACANTE $10");
+            }
+        }
+
+    }
+CÓDIGO
+using System;
+using System.ComponentModel.Design;
+
+namespace CALCULOS
+{
+    class Program
+    {
+        static void Main(string [] args) 
+        {
+            int opcion, op;
+            int n1, n2,r;
+            double n3, n4, r1;
+
+            menu:
+
+            Console.WriteLine("---BIENVENIDO A PROGRAMING---");
+            Console.WriteLine("---ELIJA UNA OPCION---");
+            Console.WriteLine("---(1)CALCULO DIV---");
+            Console.WriteLine("---(2)CALCULO MOD---");
+            Console.WriteLine("---(3)USO DE MATH.POW---");
+            Console.WriteLine("---(4)USO DE MATH.SQRT---");
+            opcion = int.Parse(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("CALCULO DEL OPERADOR DIV");
+                    Console.WriteLine("EL DIV ES EL CALCULO DE LA PARTE ENTERA DE UNA DIVISION");
+                    Console.WriteLine("EL USO DEL DIV EN C# ES CON LA DIAGONAL /");
+                    Console.WriteLine("EJEMPLO DEL USO DEL DIV");
+                    Console.WriteLine("INGRESE EL PRIMER VALOR");
+                     n1= int.Parse(Console.ReadLine());
+                    Console.WriteLine("INGRESE EL SEGUNDO VALOR");
+                    n2 = int.Parse(Console.ReadLine());
+
+                    r = n1/n2;
+
+                    Console.WriteLine("EL RESULTADO ES: " +r);
+                    Console.WriteLine("DESEA HACER OTRA OPERACION (1) SI (2) NO");
+                     op= int.Parse(Console.ReadLine());
+                    if(op == 1)
+                        {
+                        goto menu;
+
+                    }
+                    else if(op == 2)
+                    {
+                        Console.WriteLine("HASTA LUEGO..... ");
+                    }
+                    break;
+
+                case 2:
+                    
+                    Console.WriteLine("CALCULO DEL OPERADOR MOD");
+                    Console.WriteLine("EL MOD ES EL RESIDUO QUE SE DEVUELVE DE UNA DIVISION");
+                    Console.WriteLine("EL USO DEL MOD EN C# ES CON %");
+                    Console.WriteLine("INGRESE EL PRIMER VALOR");
+                    n1 = int.Parse(Console.ReadLine());
+                    Console.WriteLine("INGRESE EL SEGUNDO VALOR");
+                    n2 = int.Parse(Console.ReadLine());
+
+                    r = n1 % n2;
+
+                    Console.WriteLine("EL RESULTADO ES: " + r);
+                    Console.WriteLine("DESEA HACER OTRA OPERACION (1) SI (2) NO");
+                    op = int.Parse(Console.ReadLine());
+                    if (op == 1)
+                    {
+                        goto menu;
+                    }
+                    else if (op == 2)
+                    {
+                        Console.WriteLine("HASTA LUEGO..... ");
+                    }
+                    break;
+
+                case 3:
+                    
+                    Console.WriteLine("CALCULO DE MATH.POW");
+                    Console.WriteLine("EL MATH.POW NOS AYUDA A ELEVAR UNA BASE CON EXPONENTE");
+                    Console.WriteLine("SE UTILIZA EN C# COMO Math.Pow(base,exponente);");
+                    Console.WriteLine("INGRESE EL PRIMER VALOR");
+                    n3 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("INGRESE EL EXPONENTE");
+                    n4 = double.Parse(Console.ReadLine());
+
+                    r1 = Math.Pow(n3, n4);
+
+                    Console.WriteLine("EL RESULTADO ES: " + r1);
+                    Console.WriteLine("DESEA HACER OTRA OPERACION (1) SI (2) NO");
+                    op = int.Parse(Console.ReadLine());
+                    if (op == 1)
+                    {
+                        goto menu;
+               
+
+                    }
+                    else if (op == 2)
+                    {
+                        Console.WriteLine("HASTA LUEGO..... ");
+                    }
+                    break;
+
+                case 4:
+                    
+                    Console.WriteLine("CALCULO DE MATH.SQRT");
+                    Console.WriteLine("EL MATH.SQRT NOS AYUDA A OBTENER LA RAIZ CUADRADA DE UN NUMERO");
+                    Console.WriteLine("SE UTILIZA EN C# COMO Math.Sqrt(numero) o (operacion n+2);");
+                    Console.WriteLine("INGRESE EL PRIMER VALOR");
+                    n3 = double.Parse(Console.ReadLine());
+                    Console.WriteLine("INGRESE EL SEGUNDO VALOR");
+                    n4 = double.Parse(Console.ReadLine());
+
+                    r1 = Math.Sqrt(n3+n4);
+
+                    Console.WriteLine("EL RESULTADO ES: " + r1);
+                    Console.WriteLine("DESEA HACER OTRA OPERACION (1) SI (2) NO");
+                    op = int.Parse(Console.ReadLine());
+                    if (op == 1)
+                    {
+                        goto menu;
+
+
+                    }
+                    else if (op == 2)
+                    {
+                        Console.WriteLine("HASTA LUEGO..... ");
+                    }
+                    break;
+
+
+            }
+        }
+    }
+}
+
+                               CODIFICACIÓN 
+ namespace a
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          double FINAL, PRECIO, CANT;
+            Console.WriteLine("Introduce el precio:  ");
+            PRECIO = double.Parse(Console.ReadLine());
+            Console.WriteLine("Introduce la cantidad: ");
+            CANT = double.Parse(Console.ReadLine());
+            
+            if(CANT>=2)
+            {
+            FINAL =  (PRECIO * CANT)+((PRECIO*CANT)+((PRECIO*CANT)*0.05);
+            Console.WriteLine(“El precio más descuento es:  “+ FINAL);
+            Console.ReadKey();
+             }
+            else if (CANT<=1)
+            {
+             FINAL=PRECIO*CANT;
+            Console.WriteLine("El precio más descuento es:  "+ FINAL);
+            Console.ReadKey();
+             }
+             else
+             {
+             Console.WriteLine(“error”);
+             }
+            
+
+        }
+    }
+}
+CODIFICACIÓN               
+namespace a1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            re:
+            double cal1,cal2,cal3,cal4,cal5,final;
+            int op;
+            Console.WriteLine("introduce sus 5 calificaciones ");
+            cal1 = double.Parse(Console.ReadLine());
+            cal2 = double.Parse(Console.ReadLine());
+            cal3 = double.Parse(Console.ReadLine());
+            cal4 = double.Parse(Console.ReadLine());
+            cal5 = double.Parse(Console.ReadLine());
+            Console.WriteLine(“desea volver ingresar valores”);
+            Console.WriteLine(“1=si 2=2”);
+            op = int.Parse(Console.ReadLine());
+           if(op=1)
+           { 
+           goto re;
+           }
+          else if(op==2)
+           {
+            final = (cal1+cal2+cal3+cal4+cal5)/5;
+            Console.WriteLine("calificación final es:  " + final);
+            Console.ReadKey();
+           }
+          else
+         {
+            Console.WriteLine(“Error”);
+            Console.ReadKey();
+          }
+
+        }
+    }
+}                                               
+Codificación
+
+               
+using System;
+using System.Linq;
+
+namespace Lol
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+		dah:
+		Console.Clear();
+		double op,final,a,b;
+		Console.WriteLine("Ingrese que desea hacer: ");
+		Console.WriteLine("1=suma 2=resta 3=multi 4=division");
+		op = double.Parse(Console.ReadLine());
+		
+		switch (op)
+		{
+	     case 1:
+	     Console.WriteLine("Ingrese valor a");
+	     a  = double.Parse(Console.ReadLine());
+	     Console.WriteLine("ingrese valor b");
+	     b  = double.Parse(Console.ReadLine());
+	     
+	     final = a+b;
+	     Console.WriteLine("Resultado: "+final);
+	     Console.ReadKey();
+	     break;
+	     
+     Console.WriteLine("Ingrese valor a");
+
+	     a  = double.Parse(Console.ReadLine());
+
+	     Console.WriteLine("ingrese valor b");
+	     b  = double.Parse(Console.ReadLine());
+	     
+	     final = a-b;
+	     Console.WriteLine("Resultado: "+final);
+	     Console.ReadKey();
+	     break;
+	     
+	     case 3:
+	     Console.WriteLine("Ingrese valor a");
+	     a  = double.Parse(Console.ReadLine());
+	     Console.WriteLine("ingrese valor b");
+	     b  = double.Parse(Console.ReadLine());
+	     
+	     final = a*b;
+	     Console.WriteLine("Resultado: "+final);
+	     Console.ReadKey();
+	     break;
+	     
+	     case 4:
+	     Console.WriteLine("Ingrese valor a");
+	     a  = double.Parse(Console.ReadLine());
+	     Console.WriteLine("ingrese valor b");
+	     b  = double.Parse(Console.ReadLine());
+	     
+	     final = a/b;
+	     Console.WriteLine("Resultado: "+final);
+	     Console.ReadKey();
+     break;
+	     
+	     default:
+	     Console.WriteLine("Digite un numero valido");
+	     Console.ReadKey();
+	     goto dah;
+	     break;
+		}
+		
+		
+		}
+	}
+}                         
+CODIFICACIÓN
+
+Internal class Program
+    {
+        Static void Main(string[] args)
+        {
+          Double Cwhats, Pxwats, costo;
+            Console.WriteLine(“introduce el costo por whats  “);
+            Cwhats = double.Parse(Console.ReadLine());
+            Console.WriteLine(“introduce los whats consumidos”);
+            Pxwats = double.Parse(Console.ReadLine());
+            Costo =  (Cwhats * Pxwats);
+            Console.WriteLine(“Consumo de energia”+ costo);
+            Console.ReadKey();
+        }
+    }
+using System;
+using System.Linq;
+
+namespace Precio_de_galon
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+			 Double Internet, Horas, Total;
+			Console.WriteLine("Ingresa el precio por hora de Internet");
+			Internet= double.Parse(Console.ReadLine());
+			Console.WriteLine("Ingresa la cantidad de horas consumidas");
+			Horas= double.Parse(Console.ReadLine());
+			Total=Internet* Horas;
+			Console.WriteLine("el costo de Horas"+Total);
+		}
+	}
+
+                            CODIFICACION 
+namespace Valor_menor
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int ed1 = 0, ed2 = 0, ed3 = 0;
+            string nomb1, nomb2, nomb3;
+            Console.WriteLine("Ingresa el nombre del primero:");
+            nomb1 = (Console.ReadLine());
+            Console.WriteLine("Ingresa la edad:");
+            ed1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresa el nombre del segundo:");
+            nomb2 = (Console.ReadLine());
+            Console.WriteLine("Ingresa la edad:");
+            ed2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresa el nombre del tercero:");
+            nomb3 = (Console.ReadLine());
+            Console.WriteLine("Ingresa la edad:");
+            ed3 = int.Parse(Console.ReadLine());
+            if (ed1 < ed2 && ed1 < ed3)
+            {
+                Console.WriteLine("La persona de MENOR EDAD es:"+ nomb1);
+                Console.WriteLine("Y su edad es:" + ed1);
+            }
+            else if (ed2 < ed1 && ed2 < ed3)
+            {
+                Console.WriteLine("La persona de MENOR EDAD es:" + nomb2);
+                Console.WriteLine("Y su edad es:" + ed2);
+            }
+            else if (ed1 == ed2 && ed1 == ed3 && ed3 == ed2)
+            {
+                Console.WriteLine(" todas las personas tienen la misma edad ");
+
+            }
+            else if (ed3 < ed1 && ed3 < ed2)
+            {
+                Console.WriteLine("La persona de MENOR EDAD es:" + nomb3);
+                Console.WriteLine("Y su edad es:" + ed3);
+
+            }
+            else Console.WriteLine(" error ");
+            Console.WriteLine();
+            Console.ReadKey();
+        }
+    }
+}
+CODIFICACIÓN 
+ namespace costodeviaje
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          double kilomecosto, kilometroreco, cos;
+            Console.WriteLine("introduce el costo por kilometro  ");
+            kilomecosto = double.Parse(Console.ReadLine());
+            Console.WriteLine("introduce los kilometros recorridos");
+            kilometroreco = double.Parse(Console.ReadLine());
+            cos =  (kilomecosto * kilometroreco);
+
+            Console.WriteLine("muestra el costo de viaje  "+ cos);
+               
+            Console.ReadKey();
+
+
+
+
+
+
+        }
+    }
+}
+
